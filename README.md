@@ -17,6 +17,6 @@ I used Paintbrush for the illustrations:
 
 [1]: https://lets-dance.netlify.app/
 
-# Singing peacock [2]
+# [Singing peacock] [2]
 
 [2]: https://singing-peacock.netlify.app/
