@@ -13,10 +13,10 @@ I used Paintbrush for the illustrations:
 
 
 
-# [Preview here][1]
+# [Preview dancer here][1]
 
 [1]: https://lets-dance.netlify.app/
 
-# [Singing peacock][2]
+# [Preview singing peacock here][2]
 
 [2]: https://singing-peacock.netlify.app/
