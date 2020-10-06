@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Dance!</title>
+    </head>
+    <body>
+       
+        <canvas id="canvas"></canvas>
+        <audio src="./assets/song.mp3" muted></audio>
+                      
+        <script>
+            const song = new Audio('./assets/song.mp3');
+            song.play();
+
+            const canvasWidth = 260;
+            const canvasHeight = 480;
+
+            const x = 0;
+            const y = 0;
+
+            var sourceX;
+            var sourceY;
+
+            const sheetWidth = 1300;
+            const sheetHeight = 400;
+
+            const columns = 4;
+            const rows = 1;
+
+            const widthOfFrame = sheetWidth / columns;
+            const heightOfFrame = sheetHeight / rows;
+
+            let currentFrame = 0;
+
+            const character = new Image();
+            character.src = './assets/dancer.png';
+
+            const canvas = document.getElementById('canvas');
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+            const context = canvas.getContext('2d');
+
+            function updateFrame() {
+                currentFrame = ++currentFrame % columns;
+
+                sourceX = currentFrame * widthOfFrame;
+                sourceY = 0;
+
+                context.clearRect(x, y, widthOfFrame, heightOfFrame);
+            }
+
+            function drawImage() {
+                updateFrame();
+                context.drawImage(character, sourceX, sourceY, widthOfFrame, heightOfFrame, x, y, widthOfFrame, heightOfFrame);
+            }
+
+            setInterval(function() {
+                drawImage();
+            }, 400);
+
+
+        </script>
+    </body>
+</html>
